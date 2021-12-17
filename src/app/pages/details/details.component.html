@@ -1,0 +1,65 @@
+<div class="page-content">
+    <div class="card">
+        <div class="row">
+            <div class="col-xs-12 col-md-9">
+                <div class="card right_container">
+                    <!-- Card header -->
+                    <model-viewer [src]="obj_link" alt="A 3D model" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls>
+                        <a id="ar-button" href="https://arvr.google.com/scene-viewer/1.0?file={{obj_link}}&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;"></a>
+                    </model-viewer>
+
+                </div>
+            </div>
+            <!--Map - Worket hours-->
+            <div class="col-xs-12 col-md-3 left_scroll">
+                <div class="card hover-shadow-lg">
+
+                    <div (click)="change(detail[0].tip_link)" class="card-body text-center">
+                        <a class="img-thumbnail hover-translate-y-n3">
+                            <img style="max-height: 150px;" alt="Image placeholder" src="{{detail[0].tip_icon}}" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-2">{{detail[0].tip_name}}</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card hover-shadow-lg">
+
+                    <div (click)="change(detail[1].tip_link)" class="card-body text-center">
+                        <a style="max-height: 150px;" class="img-thumbnail hover-translate-y-n3">
+                            <img style="max-height: 150px;" alt="Image placeholder" src="{{detail[1].tip_icon}}" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-2">{{detail[1].tip_name}}</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="card-body">
+
+            <h2>{{detail[0].tip_name}}</h2>
+            <h4>2000 TL</h4>
+
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati recusandae accusamus aspernatur itaque deserunt atque! Beatae nam commodi nisi harum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, quos doloribus.
+                Minima repudiandae debitis repellendus iure maxime excepturi incidunt, esse, error, saepe vitae ab. Saepe porro dicta et sequi tempore.
+            </p>
+        </div>
+    </div>
+
+
+</div>
