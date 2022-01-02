@@ -19,26 +19,28 @@
             </div>
         </div>
 
+        
+
         <!-- Application nav -->
         <div class="nav-application clearfix">
-            <span routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="btn btn-square bg-white text-sm">
-              <span class="btn-inner--icon d-block"><i class="fas fa-home fa-2x"></i></span>
+            <span [routerLink]="['home','']" routerLinkActive="activeC" [routerLinkActiveOptions]="{ exact: true }" class="btn btn-square bg-white text-sm">
+              <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
             <span class="btn-inner--icon d-block pt-2">Tümü</span>
             </span>
-            <span routerLink="locations" routerLinkActive="active" class="btn btn-square bg-white text-sm">
-              <span class="btn-inner--icon d-block"><i class="fas fa-project-diagram fa-2x"></i></span>
+            <span [routerLink]="['home','room']" routerLinkActive="activeC" class="btn btn-square bg-white text-sm">
+              <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
             <span class="btn-inner--icon d-block pt-2">Koltuk Takımı</span>
             </span>
-            <span routerLink="products" routerLinkActive="active" class="btn btn-square bg-white text-sm">
-              <span class="btn-inner--icon d-block"><i class="fas fa-tasks fa-2x"></i></span>
+            <span [routerLink]="['home','kose']" routerLinkActive="activeC" class="btn btn-square bg-white text-sm">
+              <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
             <span class="btn-inner--icon d-block pt-2">Kose</span>
             </span>
-            <span routerLink="stores" routerLinkActive="active" class="btn btn-square bg-white text-sm">
-              <span class="btn-inner--icon d-block"><i class="fas fa-columns fa-2x"></i></span>
+            <span [routerLink]="['home','kitchen']" routerLinkActive="activeC" class="btn btn-square bg-white text-sm">
+              <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
             <span class="btn-inner--icon d-block pt-2">Yemek odası</span>
             </span>
-            <span routerLink="/admin/raflar" class="btn btn-square bg-white text-sm">
-              <span class="btn-inner--icon d-block"><i class="fas fa-users-cog  fa-2x"></i></span>
+            <span [routerLink]="['home','child']" routerLinkActive="activeC" class="btn btn-square bg-white text-sm">
+              <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
             <span class="btn-inner--icon d-block pt-2">Çocuk odası</span>
             </span>
 
@@ -47,7 +49,7 @@
     <!-- Content -->
     <div class="main-content position-relative">
         <!-- Main nav -->
-        <nav class="navbar navbar-main navbar-expand-lg navbar-dark bg-primary navbar-border" id="navbar-main">
+        <nav class="navbar navbar-main navbar-expand-md  navbar-dark bg-primary navbar-border" id="navbar-main">
             <div class="container-fluid">
 
                 <!-- Navbar nav -->
@@ -61,6 +63,29 @@
                 </div>
             </div>
         </nav>
+        <div class="nav-application clearfix d-flex d-md-none scrolling">
+            <span [routerLink]="['home','']" routerLinkActive="activeC" [routerLinkActiveOptions]="{ exact: true }" class="btn btn-square m-2 bg-white text-sm">
+                <span class="btn-inner--icon"><img src="assets/img/sofa.png" style="width: 50px;"></span>
+                <span class="btn-inner--icon pt-2">Tümü</span>
+            </span>
+            <span [routerLink]="['home','room']" routerLinkActive="activeC" class="btn m-2 btn-square bg-white text-sm">
+                <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
+                <span class="btn-inner--icon d-block pt-2">Koltuk Takımı</span>
+            </span>
+            <span [routerLink]="['home','kose']" routerLinkActive="activeC" class="btn m-2 btn-square bg-white text-sm">
+                <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
+                <span class="btn-inner--icon d-block pt-2">Kose</span>
+            </span>
+            <span [routerLink]="['home','kitchen']" routerLinkActive="activeC" class="btn  m-2 btn-square bg-white text-sm">
+                <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
+                <span class="btn-inner--icon d-block pt-2">Yemek odası</span>
+            </span>
+            <span [routerLink]="['home','child']" routerLinkActive="activeC" class="btn  m-2 btn-square bg-white text-sm">
+                <span class="btn-inner--icon d-block"><img src="assets/img/sofa.png" style="width: 50px;"></span>
+                <span class="btn-inner--icon d-block pt-2">Çocuk odası</span>
+            </span>
+
+        </div>
 
         <!--Page contennt-->
         <router-outlet></router-outlet>
