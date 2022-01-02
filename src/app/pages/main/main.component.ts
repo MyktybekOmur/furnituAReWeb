@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-main',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   items: any;
-  constructor() {
+  categoryCh: string = '';
+  productid: any = [];
+  searchKey = ''
+;  constructor(private activatedRoute: ActivatedRoute) {
     this.items = [
       {
         id: 0,
@@ -200,7 +205,21 @@ export class MainComponent implements OnInit {
         ],
       },
     ];
+   
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.productid='';
+    this.productid = this.activatedRoute.snapshot.params.id; 
+     console.log(this.productid);
+     this.activatedRoute.paramMap.subscribe(params => {
+      this.productid = params.get('id');
+      console.log(this.productid);
+    });
+  }
+  modelChangeFn(e:string){
+    console.log(e);
+  }
+ 
+  
 }
