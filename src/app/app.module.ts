@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,10 +14,12 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     routingComponents,
+    
   ],
   imports: [BrowserModule, AppRoutingModule,FormsModule],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
+  
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
