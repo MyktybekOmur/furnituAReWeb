@@ -11,7 +11,8 @@ export class MainComponent implements OnInit {
   items: any;
   categoryCh: string = '';
   productid: any = [];
-  searchKey = ''
+  searchKey = '';
+  res: any= [];
 ;  constructor(private activatedRoute: ActivatedRoute) {
     this.items = [
       {
@@ -209,16 +210,24 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productid='';
+   
     this.productid = this.activatedRoute.snapshot.params.id; 
      console.log(this.productid);
      this.activatedRoute.paramMap.subscribe(params => {
       this.productid = params.get('id');
       console.log(this.productid);
     });
+    this.productid='';
+    this.res = null;
+    this.searchKey = '';
   }
   modelChangeFn(e:string){
     console.log(e);
+    this.res = this.items.filter((item:any) => {
+      if (item.name.includes(this.searchKey)) {
+        return item;
+      }
+    });
   }
  
   
